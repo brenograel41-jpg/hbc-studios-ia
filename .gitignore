@@ -1,0 +1,17 @@
+.env
+.env.local
+venv/
+env/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.coverage
+logs/
+*.log
+conversations/
+.vscode/
+.idea/
+node_modules/
+dist/
+build/

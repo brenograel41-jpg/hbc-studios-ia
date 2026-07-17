@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHS STUDIOS IA - ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>🤖 GHS STUDIOS IA</h1>
+                <p>OpenSource AI Chatbot</p>
+            </div>
+            
+            <div class="model-selector">
+                <label for="model">Modelo:</label>
+                <select id="model">
+                    <optgroup label="Grátis">
+                        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                        <option value="gemini">Google Gemini</option>
+                    </optgroup>
+                    <optgroup label="Pago">
+                        <option value="gpt-4">GPT-4</option>
+                        <option value="claude-3-opus-20240229">Claude 3 Opus</option>
+                        <option value="command">Cohere Command</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="actions">
+                <button id="clearBtn" class="btn btn-secondary">
+                    🗑️ Limpar Histórico
+                </button>
+                <button id="exportBtn" class="btn btn-secondary">
+                    💾 Exportar
+                </button>
+            </div>
+            
+            <div class="info">
+                <p>v1.0.0</p>
+                <p>Desenvolvido por GHS Studios</p>
+            </div>
+        </aside>
+        
+        <main class="chat-container">
+            <header class="chat-header">
+                <h2>Chat Inteligente</h2>
+                <span id="status" class="status">Conectado</span>
+            </header>
+            
+            <div id="messages" class="messages">
+                <div class="message assistant">
+                    <div class="message-content">
+                        👋 Olá! Sou o assistente GHS STUDIOS IA. Como posso ajudá-lo?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Digite sua mensagem aqui..."
+                        autocomplete="off"
+                    >
+                    <button id="sendBtn" class="btn-send">
+                        📤 Enviar
+                    </button>
+                </div>
+                <small id="charCount">0/2000</small>
+            </div>
+        </main>
+    </div>
+    
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

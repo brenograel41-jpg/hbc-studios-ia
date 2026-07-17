@@ -1,0 +1,1 @@
+# GHS STUDIOS IA - Integrations Module
